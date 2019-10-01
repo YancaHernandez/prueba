@@ -1,0 +1,1 @@
+from .tiendas import Tiendas
