@@ -8,5 +8,6 @@ urlpatterns = [
     path('categorias/', include('categorias.urls')),
     path('productos/', include('productos.urls')),
     path('compras/', include('compras.urls')),
+    path('tiendas/', include('tiendas.urls')),
     path('', include(('users.urls', 'users'), namespace='users')),
 ]

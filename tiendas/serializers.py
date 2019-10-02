@@ -1,3 +1,4 @@
+from django.http import HttpResponse, JsonResponse
 from tiendas.models import Tiendas
 from rest_framework import serializers
 
@@ -14,4 +15,5 @@ class tiendasSerializer(serializers.Serializer):
     def update(self, instance, validated_data):
         instance.nombre=validated_data.get('nombre',instance.nombre)
         instance.save()
+        return instance
 

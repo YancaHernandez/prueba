@@ -11,7 +11,7 @@ from utils.models import CRideModel
 class Productos(CRideModel):
     objects=models.Manager()
     nombre = models.CharField(max_length=50)
-    precio = models.CharField(max_length=50)
+    precio = models.FloatField()
     categoria = models.ForeignKey(Categorias,on_delete=models.CASCADE,)
     tienda = models.ForeignKey(Tiendas,on_delete=models.CASCADE,)
     

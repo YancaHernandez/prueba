@@ -5,6 +5,7 @@ from rest_framework import serializers
 
 
 class productosSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = Productos
         fields = ["id",'nombre', 'precio', 'categoria',"tienda"]
@@ -22,4 +23,3 @@ class productosSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
-       
